@@ -5,7 +5,10 @@ import { Model } from 'mongoose'
 
 @Controller('User')
 export class UserController {
-  constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
+  constructor(
+    @InjectModel(User.name)
+    private userModel: Model<UserDocument>
+  ) {}
 
   @Get('createUser')
   async createUser() {

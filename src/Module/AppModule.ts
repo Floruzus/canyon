@@ -4,6 +4,8 @@ import { AppController } from '../Controller'
 import AppConfig from '../../config/app.config'
 import { UserModule } from './UserModule'
 import { MongooseModule } from '@nestjs/mongoose'
+import { ParameterService } from '../Service'
+import { User, UserSchema } from '../Entity'
 
 @Module({
   imports: [
@@ -19,9 +21,10 @@ import { MongooseModule } from '@nestjs/mongoose'
       }),
       inject: [ConfigService]
     }),
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
     UserModule
   ],
   controllers: [AppController],
-  providers: []
+  providers: [ParameterService]
 })
 export class AppModule {}

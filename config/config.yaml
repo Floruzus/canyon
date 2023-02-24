@@ -1,0 +1,13 @@
+server:
+  # Server name
+  name: Canyon
+  country: FR
+
+
+  # Server infos urls
+  url:
+    homepage: https://nightriderz.world/
+    facebook: https://www.facebook.com/gaming/nightriderzworld
+    twitter: https://twitter.com/NRZWorld
+    discord: https://discord.gg/VarWbyq
+    banner: https://cdn.nightriderz.world/images/launcher/Banner2022HRZN.jpg
